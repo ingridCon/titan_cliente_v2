@@ -1,0 +1,102 @@
+<div class="row jumbotron">
+    <div  class="col-sm-12 panel panel-default" >
+      <h2>Sustitutos</h2><br>
+      <form >
+        <div class="form-group row">
+          <label for="pensionado" class="col-sm-5 col-form-label">Documento funcionario pensionado</label>
+          <input type="text" name="id_pensionado" placeholder="pensionado de la  UD">
+        </div>
+
+        <div class="form-group row">
+          <label for="beneficiario" class="col-sm-5 col-form-label">Documento beneficiario sustituto</label>
+          <input type="text" name="id_beneficiario" placeholder="beneficiario">
+        </div>
+
+        <div class="form-group row">
+          <label for="porcentaje_sust" class="col-sm-5 col-form-label">Porcenjate asignado</label>
+          <input type="text" name="id_beneficiario" placeholder="porcenajate sobre pension">
+        </div>
+        <div class="form-group row">
+          <label for="ingreso_tutor" class="col-sm-5 col-form-label">Ingresar tutor: </label>
+          <label class="radio-inline"><input type="radio" name="optradio">Si</label>
+          <label class="radio-inline"><input type="radio" name="optradio">no</label>
+        </div>
+
+        <br><br><br><br>
+        <div class="form-group row">
+         <button ng-click='habilitar_sustituto()' class="btn">Habilitar beneficiario</button>
+         <button ng-click='limpiar()' class="btn">Cancelar</button>
+       </div>
+
+       <div class="panel panel-default">
+         <div class="panel-heading">
+           <h3 class="panel-title">Informacion tutor</h3>
+         </div>
+         <div class="panel-body">
+           <div class="form-group row">
+             <select class="select_Tipo_Documento" name="selectTipoDocumento">
+               <option selected disabled>Seleccione...</option>
+               <option value="cedula_ciudadania">Cedula de ciudadania</option>
+               <option value="cedula_extranjeria">Cedula de extranjeria</option>
+               <option value="tarjeta_identidad">Tarjeta de identidad</option>
+             </select>
+             <label for="input_id" class="col-sm-5 col-form-label">Numero de identificacion</label>
+             <input type="text" name="input_id" ng-model="idpersona" placeholder="ingrese identificacion">
+           </div>
+
+           <div class="form-group row">
+             <label for="input_nombre" class="col-sm-5 col-form-label">Nombres del tutor</label>
+             <input name="input_nombre" type="text" ng-model="primernombreTutor" placeholder="Primer nombre">
+             <input name="input_nombre" type="text" ng-model="nombreTutor" placeholder="Segundo nombre">
+           </div>
+
+           <div class="form-group row">
+             <label for="input_apellido" class="col-sm-5 col-form-label">Apellido del tutor</label>
+             <input name="input_apellido" type="text" ng-model="ApellidoBeneficiario" placeholder="Primer apellido ">
+             <input name="input_apellido" type="text" ng-model="nombreBeneficiario" placeholder="Segundo apellido">
+           </div>
+
+           <div class="form-group row">
+            <label for="select_email" class="col-sm-5 col-form-label">Correo electronico </label>
+            <input type="text" name="email" placeholder="Correo electronico">
+          </div>
+           <div class="form-group row">
+            <label for="select_numcontacto" class="col-sm-5 col-form-label">Numero de contacto</label>
+            <input type="text" name="numero_contacto" placeholder="numero de contacto">
+          </div>
+
+          <div class="form-group row">
+            <label for="tipo_cuenta_banco" class="col-sm-5 col-form-label" >Tipo de cuenta bancaria:</label>
+            <select class="tipo_cuenta_banc">
+              <option selected disabled>Seleccione..</option>
+              <option value="ahorros">AHORROS</option>
+              <option value="corriente">CORRIENTE</option>
+            </select>
+           </div>
+
+           <div class="form-group row">
+             <label for="num_cuenta_bancaria" class="col-sm-5 col-form-label">Numero de cuenta bancaria</label>
+              <input type="text" name="num_cuenta" placeholder="ingrese numero cuenta">
+           </div>
+
+           <div class="form-group row">
+             <label for="nombre_banco" class="col-sm-5 col-form-label">Banco asociado</label>
+             <input type="text" name="nombre_banco" placeholder="Banco">
+           </div>
+
+          <div class="form-group row">
+           <label for="select_numcontacto" class="col-sm-5 col-form-label">Activo</label>
+           <select class="estado" name="estado">
+             <option selected disabled>Seleccione..</option>
+             <option value="Activo">Activo</option>
+             <option value="Inactivo">Inactivo</option>
+
+           </select>
+         </div>
+             <button ng-click='limpiar()' class="btn">Cancelar</button>
+             <button ng-click='registrar_tutor()' class="btn">Registrar</button>
+
+         </div>
+       </div>
+      </form>
+</div>
