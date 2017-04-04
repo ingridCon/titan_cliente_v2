@@ -2,11 +2,11 @@
 <div class="row jumbotron">
 <button class="btn btn-success" ng-click='nominaConsulta.ShowForm()' ng-hide="nominaConsulta.formVisibility">Añadir Nomina</button>
     <div  class="col-sm-12 panel panel-default" ng-show='nominaConsulta.formVisibility' >
-        
+
 
             <h2>Registro de Nomina</h2>
           <form>
-             
+
           <div class="form-group row">
             <label for="input_nombre" class="col-sm-5 col-form-label">Nombre de la Nomina</label>
             <input name="input_nombre" type="text" ng-model="nominaConsulta.nombreNomina" placeholder="Nombre">
@@ -45,9 +45,8 @@
           </div>
             <button ng-click='nominaConsulta.limpiar()' class="btn btn-danger">Cancelar</button>
             <button ng-click='nominaConsulta.registrar_nomina()' class="btn btn-success">Registrar</button>
-
          </form>
-        
+
 
     </div>
     <br>

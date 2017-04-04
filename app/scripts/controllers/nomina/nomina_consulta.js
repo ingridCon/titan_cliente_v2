@@ -63,6 +63,7 @@ angular.module('titanClienteV2App')
      	var tipo_nomina = {
      		Id : parseInt(self.selectTipoNomina)
      	};
+      
      	var tipo_vinculacion = {
      		Id :  parseInt(self.selectVinculacion)
      	};

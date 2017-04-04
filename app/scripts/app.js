@@ -48,6 +48,7 @@ angular
         controller: 'NominaNominaConsultaCtrl',
         controllerAs: 'nominaConsulta'
       })
+
       .when('/preliquidacion/preliquidacion_registro', {
         templateUrl: 'views/preliquidacion/preliquidacion_registro.html',
         controller: 'PreliquidacionPreliquidacionRegistroCtrl',
@@ -80,17 +81,17 @@ angular
         controllerAs: 'novedadConsulta'
       })
 
-      .when('/pensiones/beneficiario',{
-       templateUrl: 'views/pensiones/beneficiario.html',
-       controller:'BeneficiarioCtrl',
-       controllerAs: 'beneficiario'
-      })
       .when('/pensiones/sustituto',{
        templateUrl: 'views/pensiones/sustituto.html',
        controller:'SustitutoCtrl',
        controllerAs: 'sustituto'
      })
 
+      .when('/pensiones/beneficiarios', {
+        templateUrl: 'views/pensiones/beneficiarios.html',
+        controller: 'BeneficiariosCtrl',
+        controllerAs: 'beneficiarios'
+      })
       .otherwise({
         redirectTo: '/'
       });

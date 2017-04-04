@@ -70,6 +70,7 @@ angular.module('titanClienteV2App')
 
 
             titanRequest.post('preliquidacion', pliquidacion).then(function(response) {
+              
               console.log(response.data);
               if(typeof(response.data)=="object"){
                 alert("Preliquidacion "+response.data.Nombre+" registrada correctamente");
